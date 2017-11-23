@@ -12,7 +12,6 @@
 
           <h3>{{answerObj.mainQuestion}}</h3>
           <div v-html="answerObj.answers[0]" class="htmlInjected"></div>
-          
 
           <div class="question">
             <div v-if="answerObj.yesNo" v-for="(question, index) in answerObj.subQuestions" class="questionsDiv clearflix">

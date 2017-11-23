@@ -45,6 +45,7 @@ module.exports = {
   },
   modules: [
     // Google Analytics
-    ['@nuxtjs/google-analytics', { id: 'UA-109177223-1' }]
+    ['@nuxtjs/google-analytics', { id: 'UA-109177223-1' }],
+    ['@nuxtjs/google-adsense', { id: 'ca-pub-7940330846074342' }]
   ]
 }

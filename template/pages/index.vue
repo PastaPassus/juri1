@@ -148,7 +148,11 @@ export default {
 
   .searchIntroText {
     display: inline;
-  }  
+  }
+
+  .searchBar {
+    position: relative;
+  }
 
   .topicsCenterText {
     text-align: center;

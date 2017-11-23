@@ -5,14 +5,14 @@
 
     <section class="title">
       <h1>{{importData.title}}</h1>
-    </section>  
+    </section>
 
 		<section class="text flex-center">
 			<p>Wählen Sie ein Thema aus zu dem Sie mehr erfahren möchten:</p>
-			
+
 			<div class="questionsGroup1" v-for="(subtopic, index1) in importData.subtopics">
 				<h3>{{subtopic.subtopicTitle}}</h3>
-				
+
 					<nuxt-link
             tag="button"
             class="questionLi btn btnPos"
@@ -24,11 +24,11 @@
           >{{question.mainQuestion}}
           </nuxt-link>
 
-			</div>	
+			</div>
 		</section>
 
     <section class="whiteSpace" :class="{order_1: changeOrder}"></section>
-      
+
 		<section class="text answers">
 			<transition-group class="giveAnswersNumbers" v-for="(subtopic, index) in importData.subtopics" :key="subtopic" name="slide" tag="div">
 				<div v-for="(question, index0) in subtopic.questions" :key="question" >
@@ -41,35 +41,8 @@
 			</transition-group>
 		</section>
 
-		<section class="text answers">
-			<p>test section</p>
-			<transition-group name="slide">
-				<div key="text1">
-					<p>Some text</p>
-					<app-feedback></app-feedback>
-				</div>
-				<div key="text2">
-					<p>Some more text</p>
-					<app-feedback></app-feedback>
-				</div>
-				<div key="text3">
-					<p>Some more text</p>
-					<app-feedback></app-feedback>
-				</div>
-				<div key="text4">
-					<p>Some more text</p>
-					<app-feedback></app-feedback>
-				</div>
-				<div key="text5">
-					<p>Some more text</p>
-					<app-feedback></app-feedback>
-				</div>
-			</transition-group>
-		</section>
-
 		<section class="ads">
 			<h4>Werbung</h4>
-			<img src="../assets/img/ads.png">
 		</section>
 
 <!-- 		<section class="returnBox LPreturn">
@@ -121,7 +94,7 @@ export default {
 
 <style>
 
-section { 
+section {
 	flex: 1 1 100%;
 }
 
@@ -193,19 +166,19 @@ main .returnBox {
   width: 100%;
   max-width: 525px;
 
-	/* Design */ 
+	/* Design */
 	/*background: rgba(165,165,165,0.15) none repeat scroll 0 0; */
 	/*border: 1px solid rgba(165,165,165);*/
 	/*box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);*/
 
-/*	background: rgba(255,255,255,0.8) none repeat scroll 0 0; 
+/*	background: rgba(255,255,255,0.8) none repeat scroll 0 0;
 
 	border-bottom: 1px solid rgba(165,165,165, 0.8);
 	border-top: 1px solid rgba(165,165,165, 0.8);
 	border-right: 0px solid rgba(165,165,165, 0.8);
   color: rgb(0,0,0);
 	cursor: pointer;
-	transition: background-color 0.1s ease-out 0s; 
+	transition: background-color 0.1s ease-out 0s;
 	opacity: 0.7;
 	margin-top: -1px;*/
 
@@ -213,7 +186,6 @@ main .returnBox {
 	text-align: center;
   display: block;
   padding: 0.6em 1.2em;
-    
 }
 
 .questionLi:hover:enabled {
@@ -221,7 +193,7 @@ main .returnBox {
 	opacity: 1;
 	color: rgb(50,50,50);
 	transition: all 0.1s;
-} 
+}
 
 .questionLi:focus {
 	outline: none;
@@ -250,7 +222,7 @@ main .answers {
 	/*---------------  Main ---------------*/
 
 
-	main .flex-center { 
+	main .flex-center {
 /*		flex: 2 1 350px;*/
 		order: 0;
 	}
@@ -303,7 +275,7 @@ main .answers {
 
 	/*---------------  Main ---------------*/
 
-	main section { 
+	main section {
 		/*margin: auto;*/
 		/*width: 790px;*/
 		text-align: left;
@@ -335,7 +307,7 @@ main .answers {
 	list-style-type: disc;
 	list-style-position: outside;
 	margin-left: 40px;
-}	
+}
 
 .htmlInjected ul, .htmlInjected p {
 	margin-bottom: 10px;
